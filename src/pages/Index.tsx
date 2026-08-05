@@ -120,7 +120,7 @@ const Index = () => {
       <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled ? "glass shadow-soft" : "bg-transparent border-transparent"}`}>
         <div className="container-tight flex items-center justify-between h-20">
           <a href="#home" className="flex items-center gap-3">
-            <img src={logo.url} alt="Ellipsis Health logo" className="h-10 w-auto" width={120} height={40} />
+            <img src={logo.url} alt="Ellipsis Health logo" className="h-12 w-auto" width={53} height={48} />
           </a>
           <nav className="hidden lg:flex items-center gap-9">
             {nav.map((n) => (
@@ -413,7 +413,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-14 border-t border-border/70">
         <div className="container-tight flex flex-col md:flex-row items-center justify-between gap-8">
-          <img src={logo.url} alt="Ellipsis Health" className="h-9 w-auto" width={110} height={36} loading="lazy" />
+          <img src={logo.url} alt="Ellipsis Health" className="h-12 w-auto" width={53} height={48} loading="lazy" />
           <nav className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
             <a href="mailto:drjackdarby@gmail.com" className="hover:text-foreground transition-colors inline-flex items-center gap-1.5">
               <Mail className="w-4 h-4" /> Contact
