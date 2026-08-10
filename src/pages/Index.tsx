@@ -270,7 +270,7 @@ const Index = () => {
               src={jackAsset.url}
               alt="Portrait of Dr Jack Darby"
               width={800}
-              height={1000}
+              height={800}
               loading="lazy"
               className="relative rounded-[2.5rem] w-full object-cover shadow-lift"
             />
