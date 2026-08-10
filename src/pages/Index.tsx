@@ -14,7 +14,7 @@ import { useBooking } from "@/components/BookingDialog";
 import { toast } from "@/hooks/use-toast";
 import logo from "@/assets/ellipsis-logo.png.asset.json";
 import heroImg from "@/assets/hero-light.jpg";
-import jackImg from "@/assets/jack.jpg";
+import jackAsset from "@/assets/dr-jack.jpeg.asset.json";
 
 const nav = [
   { label: "Home", href: "#home" },
@@ -267,7 +267,7 @@ const Index = () => {
           <div className="reveal relative">
             <div className="absolute -inset-5 rounded-[3rem] bg-accent/5 blur-2xl" aria-hidden="true" />
             <img
-              src={jackImg}
+              src={jackAsset.url}
               alt="Portrait of Dr Jack Darby"
               width={800}
               height={1000}
