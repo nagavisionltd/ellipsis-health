@@ -13,7 +13,10 @@ import { useReveal } from "@/hooks/use-reveal";
 import { useBooking } from "@/components/BookingDialog";
 import { toast } from "@/hooks/use-toast";
 import logo from "@/assets/ellipsis-logo.png.asset.json";
-import heroImg from "@/assets/hero-light.jpg";
+import heroImg from "@/assets/hero-cosmic.jpg";
+import pillarPersonalised from "@/assets/pillar-personalised.jpg";
+import pillarScience from "@/assets/pillar-science.jpg";
+import pillarSustainable from "@/assets/pillar-sustainable.jpg";
 import jackAsset from "@/assets/dr-jack.jpeg.asset.json";
 
 const nav = [
@@ -25,9 +28,9 @@ const nav = [
 ];
 
 const pillars = [
-  { icon: Sparkles, title: "Personalised", desc: "Every programme is built around your goals." },
-  { icon: FlaskConical, title: "Science-led", desc: "Evidence based training and nutrition." },
-  { icon: Leaf, title: "Sustainable", desc: "Results that fit around real life." },
+  { icon: Sparkles, title: "Personalised", desc: "Every programme is built around your goals.", img: pillarPersonalised },
+  { icon: FlaskConical, title: "Science-led", desc: "Evidence based training and nutrition.", img: pillarScience },
+  { icon: Leaf, title: "Sustainable", desc: "Results that fit around real life.", img: pillarSustainable },
 ];
 
 const services = [
@@ -214,13 +217,28 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {pillars.map((p) => (
-              <div key={p.title} className="reveal soft-card">
-                <div className="w-12 h-12 rounded-2xl grid place-items-center mb-6" style={{ background: "var(--gradient-brand)" }}>
-                  <p.icon className="w-5 h-5 text-primary-foreground" />
+              <article
+                key={p.title}
+                className="reveal group relative overflow-hidden rounded-[2rem] min-h-[24rem] shadow-lift"
+              >
+                <img
+                  src={p.img}
+                  alt=""
+                  aria-hidden="true"
+                  width={912}
+                  height={1104}
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[hsl(222_60%_6%/0.92)] via-[hsl(222_60%_6%/0.55)] to-[hsl(222_60%_6%/0.15)]" aria-hidden="true" />
+                <div className="relative h-full flex flex-col justify-end p-8">
+                  <div className="w-12 h-12 rounded-2xl grid place-items-center mb-5 backdrop-blur-sm bg-primary-foreground/10 ring-1 ring-primary-foreground/20">
+                    <p.icon className="w-5 h-5 text-primary-foreground" />
+                  </div>
+                  <h3 className="text-2xl mb-2 text-primary-foreground">{p.title}</h3>
+                  <p className="text-primary-foreground/80">{p.desc}</p>
                 </div>
-                <h3 className="text-2xl mb-3">{p.title}</h3>
-                <p className="text-muted-foreground">{p.desc}</p>
-              </div>
+              </article>
             ))}
           </div>
         </div>
