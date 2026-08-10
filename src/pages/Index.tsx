@@ -161,12 +161,12 @@ const Index = () => {
           <div>
             <span className="eyebrow mb-6">Mission control for your health</span>
             <h1 className="font-display text-5xl md:text-6xl lg:text-[4.25rem] leading-[1.03] mb-7">
-              Your Health. Your Performance.{" "}
-              <span className="gradient-text">Your Next Level.</span>
+              Unlock the <span className="gradient-text">2.0</span> version of yourself
             </h1>
             <p className="text-base md:text-lg text-muted-foreground max-w-xl mb-9 leading-relaxed">
-              Personal training, nutrition and accountability from Dr Jack Darby. Science-backed coaching designed to
-              help you lose fat, build strength, improve health and create lasting habits.
+              We believe life is a game of brain chemistry. It's not about material possessions—it's about feeling
+              fulfilled. When your neurochemistry is right, you unlock the 2.0 version of yourself and those
+              million-pound hours of productivity and creativity.
             </p>
             <div className="flex flex-wrap gap-4">
               <button onClick={() => open()} className="btn-primary">
