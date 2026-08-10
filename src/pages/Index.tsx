@@ -13,7 +13,10 @@ import { useReveal } from "@/hooks/use-reveal";
 import { useBooking } from "@/components/BookingDialog";
 import { toast } from "@/hooks/use-toast";
 import logo from "@/assets/ellipsis-logo.png.asset.json";
-import heroImg from "@/assets/hero-light.jpg";
+import heroImg from "@/assets/hero-cosmic.jpg";
+import pillarPersonalised from "@/assets/pillar-personalised.jpg";
+import pillarScience from "@/assets/pillar-science.jpg";
+import pillarSustainable from "@/assets/pillar-sustainable.jpg";
 import jackAsset from "@/assets/dr-jack.jpeg.asset.json";
 
 const nav = [
@@ -25,9 +28,9 @@ const nav = [
 ];
 
 const pillars = [
-  { icon: Sparkles, title: "Personalised", desc: "Every programme is built around your goals." },
-  { icon: FlaskConical, title: "Science-led", desc: "Evidence based training and nutrition." },
-  { icon: Leaf, title: "Sustainable", desc: "Results that fit around real life." },
+  { icon: Sparkles, title: "Personalised", desc: "Every programme is built around your goals.", img: pillarPersonalised },
+  { icon: FlaskConical, title: "Science-led", desc: "Evidence based training and nutrition.", img: pillarScience },
+  { icon: Leaf, title: "Sustainable", desc: "Results that fit around real life.", img: pillarSustainable },
 ];
 
 const services = [
