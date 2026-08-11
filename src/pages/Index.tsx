@@ -12,12 +12,12 @@ import { BeforeAfter } from "@/components/BeforeAfter";
 import { useReveal } from "@/hooks/use-reveal";
 import { useBooking } from "@/components/BookingDialog";
 import { toast } from "@/hooks/use-toast";
-import logo from "@/assets/ellipsis-logo.png.asset.json";
+import logo from "@/assets/ellipsis-logo.png";
 import heroImg from "@/assets/hero-cosmic.jpg";
 import pillarPersonalised from "@/assets/pillar-personalised.jpg";
 import pillarScience from "@/assets/pillar-science.jpg";
 import pillarSustainable from "@/assets/pillar-sustainable.jpg";
-import jackAsset from "@/assets/dr-jack.jpeg.asset.json";
+import jackAsset from "@/assets/dr-jack.jpeg";
 
 const nav = [
   { label: "Home", href: "#home" },
@@ -123,7 +123,7 @@ const Index = () => {
       <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled ? "glass shadow-soft" : "bg-transparent border-transparent"}`}>
         <div className="container-tight flex items-center justify-between h-20">
           <a href="#home" className="flex items-center gap-3">
-            <img src={logo.url} alt="Ellipsis Health logo" className="h-12 w-auto" width={53} height={48} />
+            <img src={logo} alt="Ellipsis Health logo" className="h-12 w-auto" width={53} height={48} />
           </a>
           <nav className="hidden lg:flex items-center gap-9">
             {nav.map((n) => (
@@ -285,7 +285,7 @@ const Index = () => {
           <div className="reveal relative">
             <div className="absolute -inset-5 rounded-[3rem] bg-accent/5 blur-2xl" aria-hidden="true" />
             <img
-              src={jackAsset.url}
+              src={jackAsset}
               alt="Portrait of Dr Jack Darby"
               width={800}
               height={800}
@@ -431,7 +431,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-14 border-t border-border/70">
         <div className="container-tight flex flex-col md:flex-row items-center justify-between gap-8">
-          <img src={logo.url} alt="Ellipsis Health" className="h-12 w-auto" width={53} height={48} loading="lazy" />
+          <img src={logo} alt="Ellipsis Health" className="h-12 w-auto" width={53} height={48} loading="lazy" />
           <nav className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
             <a href="mailto:drjackdarby@gmail.com" className="hover:text-foreground transition-colors inline-flex items-center gap-1.5">
               <Mail className="w-4 h-4" /> Contact
